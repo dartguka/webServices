@@ -1,8 +1,10 @@
 package com.gmoura.webservices.config;
 
+import com.gmoura.webservices.entities.Category;
 import com.gmoura.webservices.entities.Order;
 import com.gmoura.webservices.entities.User;
 import com.gmoura.webservices.entities.enums.OrderStatus;
+import com.gmoura.webservices.repositories.CategoryRepository;
 import com.gmoura.webservices.repositories.OrderRepository;
 import com.gmoura.webservices.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +25,18 @@ public class TestConfig implements CommandLineRunner {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @Override
     public void run(String... args) throws Exception {
+
+        Category cat1 = new Category(null, "Electronics");
+        Category cat2 = new Category(null, "Books");
+        Category cat3 = new Category(null, "Computer");
+
+        categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+
 
         User u1 = new User(null, "Maria Lucia", "maria@gmail.com", "988888888", "123456");
         User u2 = new User(null, "Joao Ribeiro", "joao@gmail.com", "999999999", "123456");
