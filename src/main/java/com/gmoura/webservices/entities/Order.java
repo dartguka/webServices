@@ -1,7 +1,7 @@
 package com.gmoura.webservices.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.gmoura.webservices.entities.enums.OrderStatus;
+import com.gmoura.webservices.enums.OrderStatus;
 import jakarta.persistence.*;
 
 import java.io.Serializable;

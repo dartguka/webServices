@@ -1,6 +1,4 @@
-package com.gmoura.webservices.entities.enums;
-
-import com.gmoura.webservices.entities.Order;
+package com.gmoura.webservices.enums;
 
 public enum OrderStatus {
 
